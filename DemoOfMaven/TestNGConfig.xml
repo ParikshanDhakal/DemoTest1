@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="My Login Suite" parallel="tests" thread-count="5">
+  <test name="My Login Test">
+    <classes>
+      
+      <class name="itSutraGID.DemoOfMaven.EappLoginTest">
+      <methods>
+      <include name="VerifyUserLoginAlertMsgWhenSubmitOnlyUsernameInfo" description="success"></include>
+      <include name="VerifyUserLoginWithCorrectCredentials" description="success"></include>
+      <include name="VerifyAlertWithInvalidLoginUsername" description="success"></include>
+      <include name="AlertMsgwithInvalidPassword" description="success"></include>
+      </methods>
+      
+      
+      </class>
+      
+        
+      <parameter name="url" value="http://eaapp.somee.com/"/>
+      <parameter name="browser" value="edge"/>
+    </classes>
+  </test>
+</suite>
+            
